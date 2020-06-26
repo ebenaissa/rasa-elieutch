@@ -1,76 +1,69 @@
-# Rasa NLU server template
+[ ![Codeship Status for samik-saha/rasa-chatbot](https://app.codeship.com/projects/6476d760-e5f7-0136-cc6f-426618709d8e/status?branch=master)](https://app.codeship.com/projects/319332)
 
-This template contains all you need to deploy [Rasa NLU](https://rasa.com/) server on [Heroku cloud](https://heroku.com) to make your Rasa project visible globally.
+# Sample chatbot with rasa stack
 
-## How to use
+It uses the rasa stack (rasa core/nlu/actions) to implement a simple bot which responds user messages.
 
-Click on the button below to deploy this template on your Heroku instance.
-Heroku will automatically build the Docker image and your project's NLU model.
+## Run on local machine
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-_It takes a couple of minutes to build and start the server. You can see the progress in Heroku logs._
-
-## How to make requests
-
-Once your server is deployed, you can make requests to your NLU model via [Rasa HTTP API](https://rasa.com/docs/rasa/api/http-api/#operation/parseModelMessage)
-For example:
-
-`curl https://<your Heroku application name>.herokuapp.com/model/parse -d '{"text":"hello"}'`
-
-## How to change the model
-
-Once you've deployed and tested your NLU server, you can then clone it to your machine and make changes in NLU model.
-
-### 1. Clone the application
-
-Install [git](https://git-scm.com/downloads) and [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
-Run a terminal (or console) on your machine and type
-
+#### Using docker
+Both action server and rasa-core runs as separate processes in the same container
 ```
-heroku login
-heroku git:clone -a <your Heroku application name>
-cd <your Heroku application name>
-git remote add origin https://github.com/just-ai/rasa-heroku-template
-git pull origin master
+docker build -t rasa-chatbot .
+docker run -it --rm -p 5005:5005 -e PORT=5005 rasa-chatbot
 ```
+It starts a webserver with rest api and listens for messages at localhost:5005
 
-_You have to do these steps only once per project._
+#### Test over REST api
 
-### 2. Make changes
-
-#### Install Rasa
-
-Install Rasa on your machine. Here is a great [installation guide](https://rasa.com/docs/rasa/user-guide/installation/).
-
-#### Train NLU model
-
-Then go to the directory of your application (cloned on the previous step) and make some changes in the model.
-Please refer to the [Rasa documentaion](https://rasa.com/docs/rasa/user-guide/rasa-tutorial/) to learn how to build and evaluate NLU model.
-
-_Please note that you don't have to run **rasa init** command once your template project is already cloned from Heroku._
-
-_Also note that NLU server doesn't run any actions - it only runs your [NLU model](https://rasa.com/docs/rasa/nlu/using-nlu-only/). Thus you can use only **rasa train nlu** command._
-
-#### Evaluate changes
-
-To evaluate your changes on your local machine just run NLU server locally [as described here](https://rasa.com/docs/rasa/nlu/using-nlu-only/) and make some HTTP requests.
-
-#### Push changes to Heroku
-
-Once you've trained and evaluated your NLU model, you can push changes to Heroku.
-
-Run the next commands in the terminal
-
+```bash
+curl --request POST \
+  --url http://localhost:5005/webhooks/rest/webhook \
+  --header 'content-type: application/json' \
+  --data '{
+    "message": "Hi"
+  }'
 ```
-git add .
-git commit -am "some comments"
-git push
+**Response**
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 59
+Access-Control-Allow-Origin: *
+
+[{
+  "recipient_id": "default",
+  "text": "Hi, how is it going?"
+}]
 ```
 
-Heroku will automatically handle the changes, re-build NLU model and re-start the server.
+#### Run using docker compose
+Optionally to run the actions server in separate container start the services using docker-compose. The action server runs on http://action_server:5055/webhook (docker's internal network). The rasa-core services uses the config/endpoints.local.yml to find this actions server
 
-_Please note that locally trained NLU models won't be pushed to the Heroku repository._
+```
+docker-compose up
+```
+#### Train Rasa model
+The repository already contains a trained Rasa model at models directory. To retrain the model you can run:
+```bash
+docker run --rm --volume $(pwd):/app \
+          --workdir /app rasa-chatbot \
+          rasa train --config config/config.yml
+```
 
-_Also note that your source code is not visible via Internet once Heroku hosts your Git repository in private zone._
+## Deploy to Heroku
+On heroku free tier we can start two containers using two dynos, but there isn't a way for the containers to communicate with each other on Heroku. So, we push everything (actions server/rasa core/nlu) in the same container.
+
+```bash
+heroku container:push web
+heroku container:release web
+```
+
+Another option would be to create a separate app altogether for actions server (nlu server can also be run as a separate app), which then can communicate with each other over http.
+
+## Integration with Facebook
+rasa supports integration with multiple channels. Apart from exposing the REST api over http, we can integrate with facebook. 
+
+Go to https://developers.facebook.com and creat an app. We can handle messages sent to a facebook page from our app. To do so add messenger to the facebook app and subscribe to a page. Update app secret and page token in config/credentials.yml. On the facebook app, update the webhook url to the deployed heroku app (https://rasa-chatbot.herokuapp.com/webhooks/facebook/webhook).
+
 
