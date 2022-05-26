@@ -13,7 +13,7 @@ slots:
       initial_value: ""
 responses:
   utter_bonjour1:
-  - text: TestBonjour mon coeur j'ai fait ce petit bot juste pour t'exprimer tout mon amour pour toi...
+  - text: Test2Bonjour mon coeur j'ai fait ce petit bot juste pour t'exprimer tout mon amour pour toi...
   utter_bonjour2:
   - text: A chaque message que tu ecriras au bot tu pourras voir un poème pris au hasard parmi plusieurs que j'ai choisi pour exprimer mes sentiments pour toi.
   utter_bonjour3:
