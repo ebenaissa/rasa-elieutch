@@ -3,6 +3,7 @@ USER root
 RUN python -m pip install gspread oauth2client
 
 ADD app /app
+RUN chmod +x /app/start_services.sh
 ADD server.sh /app/server.sh
 ADD . /app
 
