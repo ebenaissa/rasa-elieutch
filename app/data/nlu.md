@@ -1,0 +1,166 @@
+## intent:bonjour
+- bjr toi
+- Bonjour
+- Bonjour Djingo
+- coucou toi
+- Wesh gros
+- hello
+- Kikouu
+- moi je dis bonjour
+- ola
+- Ola Djingo
+- Ola !
+- ouech gro
+- passe le bonjour
+- Re
+- Re bonjour
+- Re !
+- Rebonjour
+- recoucou
+- salam
+- salam oualecoum
+- Salu
+- salut
+- Salut :)
+- salut ;)
+- salut biloute
+- salut cousin
+- Salut djingo
+- salut juste
+- salut mon ami
+- salut prenom
+- salut salut
+- salut salut salut
+- Salutations
+- salutttttt
+- Slt
+- tout d abord Bonjour
+- tu as le bonjour
+- wesh 
+- Wesh djingo
+- Wesh
+- Yo
+- Yo 
+- bijour
+- bjr
+- cc
+- cc toi
+- coucou
+- hey
+- hi
+- wshh
+- allo
+- bienvenue
+- bj
+- bjt
+- bonjour aussi
+- bonjour !
+- bonjour pardon
+- bonjour
+- Bonjour à tous,
+- bonjour*
+- Bonjour, mo
+- bonjour, o
+- bonjour, quand
+- buenos dias
+- coucou blondasse
+- coucou brunasse
+- coucou coquine
+- coucou ma belle
+- coucou prenom
+- coucou
+- hello world
+- hey beaugoss
+- hi there
+- hola
+- hola djingo
+- Bonjour !!
+- kikou
+- re bonjour
+- wesh
+- wsh
+- salut
+- tout d'abord Bonjour
+- salute
+
+## intent:garbage
+- frais de raacordement
+- est-ce que la première installation de la fibre est gratuite
+- combien coute l'installation pour un client d'orange
+- combien coute  le raccordement à la fibre
+- quel est le prix du raccordement à la fibre 
+- Est-ce que le raccordement à la fibre est offert 
+- est-ce qu'il faut prévoir des frais pour le raccordement à la fibre
+- Frais pour une ouverture de ligne fibre 
+- quel sera le coût pour le 1er raccordement
+- L'installation d'une prise fibre est-elle prise en charge 
+- Pour le prix d'installation de la fibre, il me semble que si le passage est souterrain les frais sont gratuit est-ce bien cela 
+- bientot eligible a la fibre que faut il faire est ce que l installation est a notre charge
+- bonjour concernant l'installation de la fibre il y a des frais pour ça 
+- j'aimerais savoir le raccordement est bien gratuit a la fibre car chez moi je ne suis pas raccordé
+- ca me couteras chère l'instalation
+- combien coute l'installation
+- combien coute le raccordement a la fibre
+- combien coute le raccordement de mon domicile a la fibre
+- est ce l installation de la fibre est gratuit
+- il y a des frais d'installation pour la fibre
+- je vais déménager est ce qu'il y aura des frais d'instalation pour la fibre
+- est ce qu il y a des frais d installation pour la fibre
+- est ce que l installation de la fibre jusqu a chez moi est comprise
+- est-ce que l'installation de la fibre est à notre charge
+- il y a des frais d'installation 
+- est-ce qu'il y a quelques choses à payer pour être raccordé à la fibre
+- il faut payer quelques choses pour être raccordé à la fibre
+- j ai une question les frais de deplacement du technicien concernant le raccordement a la fibre pour un logement sont a hauteur de quel montant
+- j aimerais savoir s il y a des frais d installation pour la fibre merci
+- j aimerais savoir s il y a des frais pour le raccordement a la fibre
+- j suis locataire, dois je payer l installation
+- je demenage dans un logement tout neuf je voulais savoir s il y avaiot des frais d installation pour la fibre
+- je souaiterai savoir si il y a des frais d installation
+- je souhaite avoir des renseignements concernant l installation de la fibre est ce que l intervention du technicien est payante
+- elle est payante l'interavention du technicien qui fera l'installation de la fibre ?
+- je souhaite avori quelques infos sur d'éventuels frais de mise en service de la fibre,
+- je souhaite savoir quel sont les frais de raccordement au reseau fibre clt
+- je voulais connaitre les frais cache par exemple frais d instalation ou de technicien
+- je souhaiterai savoir si les frais d installation sont gratuits
+- je me pose la question des frais eventuels d installation de la fibre
+- je souhaiterais avoir le coût pour un raccordement à la fibre
+- je souhaiterais connaitre le prix pour un raccordement fibre
+- je suis nouvellement eligible a la fibre et je souhaiterais savoir si il y avait des frais de mis en service ou d installation
+- je viens d emmenager est ce qu il ya des frais d installation et/ou de raccordement en sus du cout de l abonnement a internet
+- je n ai pas de ligne fixe y a t il des frais de mise en service et/ ou de raccordement en sus cordialement
+- je voudrais connaitre le montant des frais d installation de la fibre pour une maison svp
+- je voudrais connaitre quels sont les frais de mise en service pour la fibre optique
+- je voudrais souscrire a un forfait fibre installation par un technicien et elle comprise
+- je vous appel pour la fibre pour l installation combien sa coute
+- le raccordement est-il payant 
+- les frais d installation de la fibre sont ls payant pour une maison
+- mes parents souhaitent installer la fibre chez eux mais se demandent si le raccordement est payant
+- mon appartement n a jamais ete installee combien coute l installation de la fibre merci
+- le raccordement pour la fibre cette installation est gratuite ou payante 
+- pour la fibre pour linstallation combien sa coute
+- pour savoir s'il y a d'éventuels frais à prévoir pour l'installation de la Fibre 
+- je souhaiterais passer a la fibre quelles en sont les conditions frais d installation
+- pouvez vous m indiquer les tarifs d installation de la fibre pour une maison individuelle ou est ce offert
+- prix raccordement fibre
+- qu en est il des frais de raccordement au domicile pour ce qui concerne la fibre
+- qu'elle est le prix du raccordement de mon appartement en fibre optique
+- qu'elle est le prix du raccordement en fibre optique de mon appartement
+- quel est le montant des frais d installation en fibre
+- quel est le montant du raccordement et mise en service de la fibre pour un pavillon
+- quel sont les frais ouverture d une ligne fibre
+- quels sont les tarifs d activation de ligne dans le cas de la fibre
+- si je prends un abonnement box fibre y a t il des frais d installation car je demenage dans une maison
+- vous offrez les frais d'installation de la fibre
+- y a-t-il des frais de mise en service pour la Fibre
+- y atil des frais d installation raccordement
+- Il faut payer des frais particulier pour les branchements fibre
+- Dois-je payer une prestation pour raccorder la fibre à mon domicile ou c'est pris en charge par Orange
+- Je souhaites savoir si l’installion est gratuite
+- quel est le coût de l'installation je vais devoir payer en plus
+- combien coute le passage de l'adsl à la fibre lors de l'installation ?
+- y a tu es il des frais pour passer d'adsl a la fibre
+- la fibre arrive bientot chez moi y a tu es il des frais pour passer d'adsl a la fibre
+- quels sont les frais pour passer de l'adsl a la fibre 
+- mon immeuble est relié à la fibre , quel est le cout de l'installation dans mon appartement
+- J'aimerais savoir si des frais de construction de ligne seraient demandé pour l'installation de la fibre dans mon nouveau logement

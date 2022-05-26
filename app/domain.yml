@@ -1,0 +1,77 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- bonjour
+- garbage
+slots:
+   liste_poeme_ecrit:
+      type: unfeaturized
+      initial_value: ""
+   poeme_courant:
+      type: unfeaturized
+      initial_value: ""
+responses:
+  utter_bonjour1:
+  - text: NouveauBonjour mon coeur j'ai fait ce petit bot juste pour t'exprimer tout mon amour pour toi...
+  utter_bonjour2:
+  - text: A chaque message que tu ecriras au bot tu pourras voir un poème pris au hasard parmi plusieurs que j'ai choisi pour exprimer mes sentiments pour toi.
+  utter_bonjour3:
+  - text: Sache que je vois en direct chaque message que tu ecrira.
+  utter_bonjour4:
+  - text: Un dernier truc avant de te laisser parler... sache que je suis juste très heureux de t'avoir rencontré.
+  utter_bonjour5:
+  - text: Bon anniversaire mon amoureuse 🎂❤
+  utter_poeme1:
+  - image: https://zupimages.net/up/20/39/d793.jpg
+    text: 'Mon rêve familier. Paul Verlaine:'
+  utter_poeme2:
+  - image: https://zupimages.net/up/20/39/lfbj.png
+    text: "Je t'aimerai toujours. Claude-Emmanuel Lhuillier:"
+  utter_poeme3:
+  - image: https://zupimages.net/up/20/39/9i8x.jpg
+    text: 'Heureux qui près de toi soupire. Jacques Delille:'
+  utter_poeme4:
+  - image: https://zupimages.net/up/20/39/bout.jpg
+    text: "J'aime ton souris gracieux. Évariste de Parny:"
+  utter_poeme5:
+  - image: https://zupimages.net/up/20/39/xsor.png
+    text: 'Je vous aime. Jacques de Cailly:'
+  utter_poeme6:
+  - image: https://zupimages.net/up/20/39/m0yc.jpg
+    text: 'Ce qui dure. René Armand François Prudhomme:'
+  utter_poeme7:
+  - image: https://zupimages.net/up/20/39/y8bk.png
+    text: 'La prière. René Armand François Prudhomme:'
+  utter_poeme8:
+  - image: https://zupimages.net/up/20/39/tnwt.jpg
+    text: 'Nous dormirons ensemble. Louis Aragon:'
+  utter_poeme9:
+  - image: https://zupimages.net/up/20/39/rf9m.jpg
+    text: 'Quand je ferme les yeux. Laure Bachelier:'
+  utter_poeme10:
+  - image: https://zupimages.net/up/20/39/4avr.jpg
+    text: 'Dors mon amour. Reine Bataillou:'
+  utter_fallback:
+  - text: Jcomprends rien a cque tu mdit wesh !
+actions:
+#Utter
+- utter_bonjour1
+- utter_bonjour2
+- utter_bonjour3
+- utter_bonjour4
+- utter_bonjour5
+- utter_poeme1
+- utter_poeme2
+- utter_poeme3
+- utter_poeme4
+- utter_poeme5
+- utter_poeme6
+- utter_poeme7
+- utter_poeme8
+- utter_poeme9
+- utter_poeme10
+- utter_fallback
+#Action
+- action_default_fallback
+- ecriture_tracker
