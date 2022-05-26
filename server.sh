@@ -6,7 +6,7 @@ then
 fi
 
 # Start actions server in background
-rasa run actions --actions actions --debug
+rasa run actions --actions actions&
 
 # Start rasa server
 rasa run --enable-api --port $PORT
