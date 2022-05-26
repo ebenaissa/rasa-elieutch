@@ -74,4 +74,3 @@ actions:
 - utter_fallback
 #Action
 - action_default_fallback
-- ecriture_tracker

@@ -1,3 +1,5 @@
+"""
+
 # -*- coding: utf-8 -*-
 from rasa_sdk import Action
 import datetime
@@ -16,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 class ActionEcriture(Action):
-    """Returns the chitchat utterance dependent on the intent"""
+    #"Returns the chitchat utterance dependent on the intent"
 
     def name(self):
         return "ecriture_tracker"
@@ -59,3 +61,4 @@ class ActionEcriture(Action):
 
         return []
             
+"""
